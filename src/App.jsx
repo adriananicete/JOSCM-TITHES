@@ -1,5 +1,5 @@
 import Home from "./components/Home";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router";
 import Login from "./components/Login";
 import BaseLayout from "./layout/BaseLayout";
 import UserProvider from "./context/UserContext";
@@ -7,7 +7,7 @@ import UserProvider from "./context/UserContext";
 function App() {
   return (
     <UserProvider>
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route path="/" element={<BaseLayout />}>
             <Route index element={<Navigate to="login" replace />} />
@@ -15,7 +15,7 @@ function App() {
             <Route path="home" element={<Home />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </Router>
     </UserProvider>
   );
 }
