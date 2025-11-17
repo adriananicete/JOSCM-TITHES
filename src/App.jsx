@@ -1,5 +1,5 @@
 import Home from "./components/Home"
-import { HashRouter as Router , Routes, Route } from "react-router"
+import { HashRouter as Router , Routes, Route, Navigate } from "react-router"
 import Login from "./components/Login"
 import BaseLayout from "./layout/BaseLayout"
 
@@ -9,6 +9,8 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Navigate to="/login" replace />} />
+
         <Route path="/" element={<BaseLayout />}>
           <Route index element={< Home />} />
           <Route path="/login" element={< Login />} />
