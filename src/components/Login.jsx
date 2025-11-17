@@ -57,7 +57,7 @@ function Login() {
         <div className="w-[100%] bg-(--base-color) flex justify-start items-center gap-2 px-3 py-2">
           <FiUser />
           <input
-            className=""
+            className="outline-none"
             type="text"
             placeholder="Name"
             autoComplete="on"
@@ -69,6 +69,7 @@ function Login() {
         <div className="w-[100%] bg-(--base-color) flex justify-start items-center gap-2 px-3 py-2">
           <TbLockPassword />
           <input
+            className="outline-none"
             type="password"
             placeholder="Password"
             autoComplete="on"
@@ -79,9 +80,9 @@ function Login() {
 
         {message && <p className="text-[red] text-[12px]">{message}</p>}
 
-        <div className="w-[100%] flex flex-col justify-center items-center mt-5">
+        <div className="w-[100%] flex flex-col justify-center items-center mt-5 gap-2">
           <button
-            className="w-[100%] bg-[#316b79] text-white px-3 py-1 rounded-[5px]"
+            className="w-[100%] bg-[#316b79] text-white px-3 py-2 rounded-[5px]"
             type="submit"
           >
             Login
