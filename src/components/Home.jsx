@@ -93,28 +93,28 @@ function Home() {
       <div className="w-full rounded-[10px] h-[auto] bg-[#ebf2fa] flex flex-col justify-center items-center gap-2">
         <div className="bg-[#8a61e9] w-[100%] h-[90px] flex justify-center items-end rounded-[10px]">
           <div className="w-full h-[90%] bg-[#fdefe2] rounded-[10px] flex justify-start items-center gap-3 p-3 shadow-sm">
-            <div className="w-[50px] h-[50px] p-3 bg-[#fff] rounded-[50%]">
-              <FaCalendarAlt size={24} color="#c762c8" />
+            <div className="w-[40px] h-[40px] p-3 bg-[#fff] rounded-[50%]">
+              <FaCalendarAlt size={20} color="#c762c8" />
             </div>
 
             <div className="w-full">
               <p className="font-[600]">Upcoming Event:</p>
               <div className="w-full flex justify-between items-center">
-                <p className="italic">Church Anniversary</p>
-                <p className="italic">December 7, 2025</p>
+                <p className="italic text-[14px]">Church Anniversary</p>
+                <p className="italic text-[14px]">December 7, 2025</p>
               </div>
             </div>
           </div>
         </div>
 
         <div className="p-1">
-          <p className="text-[14px] text-[#447596]">
+          <p className="text-[14px] text-[#447596] font-[500]">
             Those who give with love receive joy in return.
           </p>
         </div>
       </div>
 
-      <div className="w-full h-[350px] box mt-3 grid grid-cols-2 grid-row-2 gap-5">
+      <div className="w-full h-[200px] mt-3 grid grid-cols-2 grid-row-2 gap-3">
         <div className="box">
           <p>Total Tithes This Month</p>
         </div>
