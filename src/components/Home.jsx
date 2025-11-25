@@ -8,6 +8,8 @@ import { FaPlus } from "react-icons/fa6";
 import { TbUserCircle } from "react-icons/tb";
 import { FaCalendarAlt } from "react-icons/fa";
 import { useNavigate } from "react-router";
+import { FaCalendarPlus } from "react-icons/fa";
+import HomeCards from "./home/home-components/HomeCards";
 
 function Home() {
   const { user } = useContext(UserContext);
@@ -21,7 +23,7 @@ function Home() {
   }
 
   return (
-    <div className="w-[100%] bg-[#f9f9f9] p-5 flex flex-col justify-center items-center gap-5 md:w-[23%]">
+    <div className="w-[100%] bg-[#f9f9f9] p-5 flex flex-col justify-center items-center gap-5 pt- md:w-[23%]">
       <div className="w-full flex justify-between items-start">
         <div>
           <h1 className="text-[20px] font-[500]">
@@ -33,7 +35,11 @@ function Home() {
         </div>
 
         <div className="w-[52px] h-[52px] rounded-[50%] bg-[#fff]">
-          <img className="w-[100%] h-[100%] object-cover " src="https://res.cloudinary.com/dks2psaem/image/upload/v1763347986/joscm-logo_jq0zlo.png" alt="" />
+          <img
+            className="w-[100%] h-[100%] object-cover "
+            src="https://res.cloudinary.com/dks2psaem/image/upload/v1763347986/joscm-logo_jq0zlo.png"
+            alt=""
+          />
         </div>
       </div>
 
@@ -114,13 +120,35 @@ function Home() {
         </div>
       </div>
 
-      <div className="w-full h-[200px] mt-3 grid grid-cols-2 grid-row-2 gap-3">
-        <div className="box">
-          <p>Total Tithes This Month</p>
+      <div className=" w-full h-[auto] mt-3 grid grid-cols-2 grid-row-2 gap-3">
+        <div className=" box flex">
+          <div className="w-[49%] box">
+
+          </div>
+
+          <div className="w-[49%] box">
+
+          </div>
         </div>
-        <div className="box">2</div>
-        <div className="box">3</div>
-        <div className="box">4</div>
+
+        <HomeCards
+          icon={FaCalendarPlus}
+          title="Add Event"
+          description="Add or update your next church event"
+          color="#3281fb"
+        />
+
+        <HomeCards
+          icon={FaCalendarPlus}
+          title="Add Event"
+          description="Add or update your next church event"
+        />
+
+        <HomeCards
+          icon={FaCalendarPlus}
+          title="Add Event"
+          description="Add or update your next church event"
+        />
       </div>
     </div>
   );
