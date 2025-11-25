@@ -44,8 +44,8 @@ function Home() {
               Total Remaining Balance:
             </p>
           </div>
-          <div className="w-[auto] h-[auto] bg-[#f9f9f9] p-1 flex justify-center items-center gap-1 rounded-[15px]">
-            <p className="text-[10px] text-[#7f38ef] font-[500]">View Tithes</p>
+          <div className="w-[auto] h-[auto] bg-[#f9f9f9] p-2 flex justify-center items-center gap-1 rounded-[15px]">
+            <p className="text-[12px] text-[#7f38ef] font-[500]">View Tithes</p>
             <FaArrowRight size={10} className="text-[#7f38ef]" />
           </div>
         </div>
