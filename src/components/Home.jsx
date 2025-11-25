@@ -32,20 +32,20 @@ function Home() {
           </p>
         </div>
 
-        <div className="w-[48px] h-[48px] rounded-[50%] p-1 bg-[#fff]">
+        <div className="w-[52px] h-[52px] rounded-[50%] bg-[#fff]">
           <img className="w-[100%] h-[100%] object-cover " src="https://res.cloudinary.com/dks2psaem/image/upload/v1763347986/joscm-logo_jq0zlo.png" alt="" />
         </div>
       </div>
 
       <div className="bg-[linear-gradient(135deg,#0f1013,#454545,#575759)] w-[100%] h-[120px] flex flex-col justify-center items-center p-3 rounded-[10px]">
         <div className="w-[100%] flex justify-between items-center">
-          <div className="w-[auto] h-[100%] bg-[#7f38ef] rounded-[5px] p-2">
-            <p className="text-[14px] text-[white] font-[600]">
+          <div className="w-[auto] h-[auto] bg-[#7f38ef] rounded-[5px] flex justify-center items-center p-1">
+            <p className="text-[12px] text-[white] font-[600]">
               Total Remaining Balance:
             </p>
           </div>
-          <div className="w-[auto] h-[100%] bg-[#f9f9f9] p-2 flex justify-center items-center gap-1 rounded-[15px]">
-            <p className="text-[12px] text-[#7f38ef] font-[500]">View Tithes</p>
+          <div className="w-[auto] h-[auto] bg-[#f9f9f9] p-1 flex justify-center items-center gap-1 rounded-[15px]">
+            <p className="text-[10px] text-[#7f38ef] font-[500]">View Tithes</p>
             <FaArrowRight size={10} className="text-[#7f38ef]" />
           </div>
         </div>
@@ -93,7 +93,7 @@ function Home() {
       <div className="w-full rounded-[10px] h-[auto] bg-[#ebf2fa] flex flex-col justify-center items-center gap-2">
         <div className="bg-[#8a61e9] w-[100%] h-[90px] flex justify-center items-end rounded-[10px]">
           <div className="w-full h-[90%] bg-[#fdefe2] rounded-[10px] flex justify-start items-center gap-3 p-3 shadow-sm">
-            <div className="w-[40px] h-[40px] p-3 bg-[#fff] rounded-[50%]">
+            <div className="w-[40px] h-[40px] p-3 bg-[#fff] rounded-[50%] flex justify-center items-center">
               <FaCalendarAlt size={20} color="#c762c8" />
             </div>
 
