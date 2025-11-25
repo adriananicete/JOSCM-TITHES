@@ -32,8 +32,8 @@ function Home() {
           </p>
         </div>
 
-        <div className="w-[auto] h-[auto] rounded-[50%] p-1 bg-[#020202]">
-          <TbUserCircle size={23} color="#fff" />
+        <div className="w-[48px] h-[48px] rounded-[50%] p-1 bg-[#fff]">
+          <img className="w-[100%] h-[100%] object-cover " src="https://res.cloudinary.com/dks2psaem/image/upload/v1763347986/joscm-logo_jq0zlo.png" alt="" />
         </div>
       </div>
 

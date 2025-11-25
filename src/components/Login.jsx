@@ -93,39 +93,39 @@ function Login() {
         </div>
       </form>
 
-      <div className="w-[80%] h-[auto] grid grid-cols-3 grid-row-3 gap-2">
-        <div className="h-[100px] col-span-2">
+      <div className="w-[80%] h-[300px] grid grid-cols-3 grid-row-3 gap-2">
+        <div className="w-full h-[100%] col-span-2">
           <img
             className="w-[100%] h-[100%] object-cover"
-            src="https://scontent.fmnl9-6.fna.fbcdn.net/v/t39.30808-6/481446328_951382760519562_3962080003825009298_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGIpBD_iRZfjgg3zRUGibIvMQeQ01Mb9zsxB5DTUxv3Ozk5rNWeF4gE_8O2yqiUBAghUOFWu7CvrRFobqpu1iBl&_nc_ohc=-YeOORENMkEQ7kNvwHHiUgP&_nc_oc=AdkJjGn9vrivax8S-nokzrsTTCjjsoMvIgc6k76liZh1lLGJG_QbSHj5PH6dGvRWLRQ&_nc_zt=23&_nc_ht=scontent.fmnl9-6.fna&_nc_gid=AnYLBO9qGNdW91yIQdKIuA&oh=00_AfjNDESrc_zqm_2M1_v00l8CI_lYkKsM5xEqwNm9ZbCf3Q&oe=69207617"
+            src="https://res.cloudinary.com/dks2psaem/image/upload/v1764066059/481446328_951382760519562_3962080003825009298_n_jxwu4d.jpg"
             alt=""
           />
         </div>
-        <div className="">
+        <div className="w-full h-[100%]">
           <img
             className="w-[100%] h-[100%] object-cover"
-            src="https://scontent.fmnl9-7.fna.fbcdn.net/v/t39.30808-6/481988027_951381547186350_4974365140442232495_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHdSEP-n6Pi7TMVJa3Sz5gMFfWQh3yz2_QV9ZCHfLPb9NQcTQkBGsCSCeE5HV5D2hsw4jV3_BgY8_s6coPRAldG&_nc_ohc=pdMHPx48Aj0Q7kNvwHM9y58&_nc_oc=AdlDhqP8SFY3xTdAwFulmdhJEG0sBJdI_v5svn58cKRQla-nlfqnPjIIbv24QBBZ6xg&_nc_zt=23&_nc_ht=scontent.fmnl9-7.fna&_nc_gid=BB044gkoLxYtrv5c3hQiiQ&oh=00_AfjVQ50EW8gBGIAXEk3oUfCtXuT88Qpi844kKA6903ibQQ&oe=69208E61"
-            alt=""
-          />
-        </div>
-        <div className="h-[100px]">
-          <img
-            className="w-[100%] h-[100%] object-cover"
-            src="https://scontent.fmnl9-3.fna.fbcdn.net/v/t39.30808-6/481111348_948848030773035_4625263371043179602_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGCAlbIxJZECxTUrqf7FnlMCtUSQGCNUBsK1RJAYI1QG-2FwFAczmOmBUK_5Bgx_noJLO5as0Rdz0LT1bTos_Mg&_nc_ohc=T-CK_2h7CQQQ7kNvwHCixMw&_nc_oc=Adlf4PaOYU1ObMsxFgrAWstvHGyXKHobveB9D1OaVsDyURT9K99Pqnti7nA6sHwrhhA&_nc_zt=23&_nc_ht=scontent.fmnl9-3.fna&_nc_gid=cTOX3MGGoPaZggCsWZaUow&oh=00_AfjLAqVATg4khRi81dy83_LFeVuh5fwfqjhe5jY0YH1NrQ&oe=69207C22"
+            src="https://res.cloudinary.com/dks2psaem/image/upload/v1764066059/482021280_951381720519666_8277347871723655797_n_g271r9.jpg"
             alt=""
           />
         </div>
         <div className="h-[100px]">
           <img
             className="w-[100%] h-[100%] object-cover"
-            src="https://scontent.fmnl9-4.fna.fbcdn.net/v/t39.30808-6/482218123_951381677186337_7326057902349160620_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEgAPdo8YI6JCMXcc3K5TCWf5AULNaf5eF_kBQs1p_l4WfYNcjmFG5R0yGFrTEFf-tP4ERS16x_VlJ_yvXGd8WR&_nc_ohc=jCkks9sqztsQ7kNvwGTASHK&_nc_oc=AdkHlZBmkXBQqEe66NOZhGMSs1axNp9kCL2JvQCfSiY0tM8EI4W9jAP_I1WLsReHIrI&_nc_zt=23&_nc_ht=scontent.fmnl9-4.fna&_nc_gid=jvN4EfzhA9m8MTFN2G-B3w&oh=00_AfiSU0WA7vxrsj2N7V-idkx5N18nFvKDDkxcGvZA8R5MJQ&oe=69209A29"
+            src="https://res.cloudinary.com/dks2psaem/image/upload/v1764066059/503105633_1016291047362066_8986736371845259397_n_yxz98i.jpg"
             alt=""
           />
         </div>
         <div className="h-[100px]">
           <img
             className="w-[100%] h-[100%] object-cover"
-            src="https://scontent.fmnl9-2.fna.fbcdn.net/v/t39.30808-6/481467265_951382633852908_5288436725989847091_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGXReld3P0dmBNO_3VADTqOSqPJIirCPE5Ko8kiKsI8ToFxPOlTwEZhMPMZL4-Tpi_EYpl3XyLryS_MP22DbQVW&_nc_ohc=ggciens86wEQ7kNvwFcpb8z&_nc_oc=AdnoPXx_EAhdebTf-JfzhKH-Aw4251qja4Yb6J6EZXRxGXVDDo7zUpqXP6G_yVTSfBk&_nc_zt=23&_nc_ht=scontent.fmnl9-2.fna&_nc_gid=N303WXxAuTWfa9O9wDiQhQ&oh=00_AfhdEHK-WI0vZ_yfjANAuotBxTX9_JCgW0q0W7XH8bknuQ&oe=69207361"
+            src="https://res.cloudinary.com/dks2psaem/image/upload/v1764066059/482069629_951382420519596_3289683888348870425_n_mhcztj.jpg"
+            alt=""
+          />
+        </div>
+        <div className="h-[100px]">
+          <img
+            className="w-[100%] h-[100%] object-cover"
+            src="https://res.cloudinary.com/dks2psaem/image/upload/v1764066255/482069667_951381737186331_2862616417781471445_n_vpbtos.jpg"
             alt=""
           />
         </div>
