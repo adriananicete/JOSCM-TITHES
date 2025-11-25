@@ -1,6 +1,17 @@
 @import "tailwindcss";
+@tailwind components;
 
 :root {
     --base-color: #f2f2f2;
     --secondary-text-color: #a5a5a5;
   }
+
+@layer components {
+  .box {
+    @apply border border-black;
+  }
+
+  .box-white {
+    @apply border border-white;
+  }
+}

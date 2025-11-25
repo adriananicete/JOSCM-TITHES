@@ -34,7 +34,7 @@ function Login() {
   };
 
   return (
-    <div className="w-[90%] h-[95%] bg-white flex flex-col justify-center items-center gap-8">
+    <div className="w-[90%]  h-[95%] bg-white flex flex-col justify-center items-center gap-8 lg:w-[25%]">
       <div className="flex flex-col justify-center items-center">
         <div className="flex justify-center items-center gap-2">
           <div className="w-[48px] h-[48px] ">

@@ -3,6 +3,9 @@ import { HashRouter as Router, Routes, Route, Navigate } from "react-router";
 import Login from "./components/Login";
 import BaseLayout from "./layout/BaseLayout";
 import UserProvider from "./context/UserContext";
+import AddTithes from "./components/home/AddTithes";
+import GenerateTithes from "./components/home/GenerateTithes";
+import Expense from "./components/home/Expense";
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
             <Route index element={<Navigate to="login" replace />} />
             <Route path="login" element={<Login />} />
             <Route path="home" element={<Home />} />
+            <Route path="addTithes" element={<AddTithes />} />
+            <Route path="generateTithes" element={<GenerateTithes />} />
+            <Route path="expenses" element={<Expense />} />
           </Route>
         </Routes>
       </Router>

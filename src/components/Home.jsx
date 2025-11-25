@@ -5,10 +5,13 @@ import { FaArrowRight } from "react-icons/fa6";
 import { FaChartBar } from "react-icons/fa";
 import { LiaFileInvoiceDollarSolid } from "react-icons/lia";
 import { FaPlus } from "react-icons/fa6";
-import { CgExport } from "react-icons/cg";
+import { TbUserCircle } from "react-icons/tb";
+import { FaCalendarAlt } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
 function Home() {
   const { user } = useContext(UserContext);
+  const navigate = useNavigate();
 
   function capitalLetter(user) {
     const firstLetter = user.charAt(0).toUpperCase();
@@ -18,14 +21,20 @@ function Home() {
   }
 
   return (
-    <div className="w-[100%] bg-[#f9f9f9] p-5 flex flex-col justify-center items-center gap-5">
-      <div className="w-full">
-        <h1 className="text-[20px] font-[500]">
-        Welcome, {capitalLetter(user || "guest")}!{" "}
-      </h1>
-      <p className="text-[#656565] text-[14px]">
-        Your reports are ready — review them anytime.
-      </p>
+    <div className="w-[100%] bg-[#f9f9f9] p-5 flex flex-col justify-center items-center gap-5 md:w-[23%]">
+      <div className="w-full flex justify-between items-start">
+        <div>
+          <h1 className="text-[20px] font-[500]">
+            Welcome, {capitalLetter(user || "guest")}!{" "}
+          </h1>
+          <p className="text-[#656565] text-[14px]">
+            Your reports are ready — review them anytime.
+          </p>
+        </div>
+
+        <div className="w-[auto] h-[auto] rounded-[50%] p-1 bg-[#020202]">
+          <TbUserCircle size={23} color="#fff" />
+        </div>
       </div>
 
       <div className="bg-[linear-gradient(135deg,#0f1013,#454545,#575759)] w-[100%] h-[120px] flex flex-col justify-center items-center p-3 rounded-[10px]">
@@ -40,10 +49,10 @@ function Home() {
             <FaArrowRight size={10} className="text-[#7f38ef]" />
           </div>
         </div>
-        <div className="flex-[1] w-[100%] col-span-2 flex flex-col items-start justify-end leading-[20px]">
+        <div className="flex-[1] w-[100%] col-span-2 flex flex-col items-start justify-end leading-[22px]">
           <p className="text-[12px] text-[#a0a0a0]">Amount</p>
           <div className="flex justify-start items-center text-white">
-            <TbCurrencyPeso /> <p className="text-[25px] font-[500]">20,000</p>
+            <TbCurrencyPeso /> <p className="text-[30px] font-[500]">20,000</p>
           </div>
         </div>
       </div>
@@ -52,23 +61,66 @@ function Home() {
         <p className="text-[16px] font-[500] mb-2">Quick Actions</p>
 
         <div className="grid grid-cols-3 gap-2 flex-1 items-stretch text-center">
-          
-          <div className="bg-[#fff] flex flex-col justify-center items-center border border-[#fff] rounded-[5px] shadow-sm">
-            <FaPlus size={25} /> 
+          {/* Add Tithes */}
+          <div
+            onClick={() => navigate("/addTithes")}
+            className="bg-[#fff] cursor-pointer flex flex-col justify-center items-center border border-[#fff] rounded-[5px] shadow-sm"
+          >
+            <FaPlus size={25} />
             <p className="text-[12px]">Add Tithes</p>
           </div>
 
-          <div className="bg-[#fff] flex flex-col justify-center items-center border border-[#fff] rounded-[5px] shadow-sm">
-            <FaChartBar size={30} /> 
+          {/* Generate Report */}
+          <div
+            onClick={() => navigate("/generateTithes")}
+            className="bg-[#fff] cursor-pointer flex flex-col justify-center items-center border border-[#fff] rounded-[5px] shadow-sm"
+          >
+            <FaChartBar size={30} />
             <p className="text-[12px]">Generate Report</p>
           </div>
 
-          <div className="bg-[#fff] flex flex-col justify-center items-center border border-[#fff] rounded-[5px] shadow-sm">
-            <LiaFileInvoiceDollarSolid size={30} /> 
+          {/* Expense */}
+          <div
+            onClick={() => navigate("/expenses")}
+            className="bg-[#fff] cursor-pointer flex flex-col justify-center items-center border border-[#fff] rounded-[5px] shadow-sm"
+          >
+            <LiaFileInvoiceDollarSolid size={30} />
             <p className="text-[12px]">Expense</p>
           </div>
-          
         </div>
+      </div>
+
+      <div className="w-full rounded-[10px] h-[auto] bg-[#ebf2fa] flex flex-col justify-center items-center gap-2">
+        <div className="bg-[#8a61e9] w-[100%] h-[90px] flex justify-center items-end rounded-[10px]">
+          <div className="w-full h-[90%] bg-[#fdefe2] rounded-[10px] flex justify-start items-center gap-3 p-3 shadow-sm">
+            <div className="w-[50px] h-[50px] p-3 bg-[#fff] rounded-[50%]">
+              <FaCalendarAlt size={24} color="#c762c8" />
+            </div>
+
+            <div className="w-full">
+              <p className="font-[600]">Upcoming Event:</p>
+              <div className="w-full flex justify-between items-center">
+                <p className="italic">Church Anniversary</p>
+                <p className="italic">December 7, 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="p-1">
+          <p className="text-[14px] text-[#447596]">
+            Those who give with love receive joy in return.
+          </p>
+        </div>
+      </div>
+
+      <div className="w-full h-[350px] box mt-3 grid grid-cols-2 grid-row-2 gap-5">
+        <div className="box">
+          <p>Total Tithes This Month</p>
+        </div>
+        <div className="box">2</div>
+        <div className="box">3</div>
+        <div className="box">4</div>
       </div>
     </div>
   );
