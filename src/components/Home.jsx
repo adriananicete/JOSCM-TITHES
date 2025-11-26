@@ -10,6 +10,9 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { useNavigate } from "react-router";
 import { FaCalendarPlus } from "react-icons/fa";
 import HomeCards from "./home/home-components/HomeCards";
+import { IoTicketOutline } from "react-icons/io5";
+import { RiFileList3Line } from "react-icons/ri";
+
 
 function Home() {
   const { user } = useContext(UserContext);
@@ -23,7 +26,7 @@ function Home() {
   }
 
   return (
-    <div className="w-[100%] bg-[#f9f9f9] p-5 flex flex-col justify-center items-center gap-5 pt- md:w-[23%]">
+    <div className="w-[100%] h-[100dvh] bg-[#f9f9f9] p-5 flex flex-col justify-center items-center gap-5 md:w-[50%] lg:w-[24%]">
       <div className="w-full flex justify-between items-start">
         <div>
           <h1 className="text-[20px] font-[500]">
@@ -139,15 +142,17 @@ function Home() {
         />
 
         <HomeCards
-          icon={FaCalendarPlus}
-          title="Add Event"
-          description="Add or update your next church event"
+          icon={IoTicketOutline}
+          title="Create Voucher"
+          description="Add or create a new voucher."
+          color="#3ab677"
         />
 
         <HomeCards
-          icon={FaCalendarPlus}
-          title="Add Event"
-          description="Add or update your next church event"
+          icon={RiFileList3Line}
+          title="Request From"
+          description="Request or fill out a form document."
+          color="#c2737b"
         />
       </div>
     </div>
