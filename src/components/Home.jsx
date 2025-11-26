@@ -57,7 +57,7 @@ function Home() {
   }
 
   return (
-    <div className="w-[100%] h-[100%] bg-[#f9f9f9] p-5 flex flex-col justify-center items-center gap-5 md:w-[50%] md:h-auto lg:w-[24%]">
+    <div className="w-[100%] h-[100%] bg-[#f9f9f9] p-5 py-[20px] flex flex-col justify-center items-center gap-5  md:w-[50%] md:h-auto lg:w-[24%]">
       <div className="w-full flex justify-between items-start">
         <div>
           <h1 className="text-[20px] font-[500]">
