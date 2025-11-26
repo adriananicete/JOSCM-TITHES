@@ -12,10 +12,42 @@ import { FaCalendarPlus } from "react-icons/fa";
 import HomeCards from "./home/home-components/HomeCards";
 import { IoTicketOutline } from "react-icons/io5";
 import { RiFileList3Line } from "react-icons/ri";
+import { IoIosArrowForward } from "react-icons/io";
 
 function Home() {
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
+
+  const date = new Date().getDate();
+  const year = new Date().getFullYear();
+  const day = new Date().getDay();
+  const months = new Date().getMonth();
+  const arrDay = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const arrMonths = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "Augest",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const dayName = arrDay[day];
+  const monthName = arrMonths[months];
 
   function capitalLetter(user) {
     const firstLetter = user.charAt(0).toUpperCase();
@@ -126,15 +158,18 @@ function Home() {
         <p className="font-[600] ">Activity Center</p>
 
         <div className=" w-full h-[auto] grid grid-cols-2 grid-row-2 gap-3  ">
-          <div className=" bg-[linear-gradient(135deg,#4160ff,#4160ff,#A5B3FF)] flex flex-col justify-between items-center rounded-[10px] shadow-md">
-            <div className="text-[white] w-full leading-[20px] p-2">
-              <p className="text-[12px]">Wednesday</p>
-              <p className="text-[16px] font-[600]">NOVEMBER</p>
-              <p className="text-[18px]">26, 2025</p>
+          <div className="cursor-pointer bg-[linear-gradient(135deg,#4160ff,#4160ff,#A5B3FF)] flex flex-col justify-between items-center rounded-[10px] shadow-md">
+            <div className="text-[white] w-full h-[100%] flex flex-col justify-between leading-[20px] p-2">
+              <p className="text-[12px]">{dayName}</p>
+              <p>
+                <span className="text-[15px] font-[700]">{monthName}</span>{" "}
+                {date}, {year}
+              </p>
             </div>
 
-            <div className="w-full p-2 bg-[#fff] rounded-br-[10px] rounded-bl-[10px]">
-              <button className="cursor-pointer text-[14px] ">View Calendar</button>
+            <div className="w-full p-2 bg-[#fff] rounded-br-[10px] rounded-bl-[10px] flex justify-between items-center">
+              <button className=" text-[14px] ">View Calendar</button>
+              <IoIosArrowForward size={18} />
             </div>
           </div>
 
