@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FiUser } from "react-icons/fi";
 import { TbLockPassword } from "react-icons/tb";
 import { useNavigate } from "react-router";
@@ -10,7 +10,7 @@ function Login() {
   const [message, setMessage] = useState("");
 
   const navigate = useNavigate();
-  const { setUser } = useContext(UserContext)
+  const { setUser } = useContext(UserContext);
 
   const users = [
     { username: "roselyn", password: "roselyn171014" },
@@ -26,12 +26,20 @@ function Login() {
     );
 
     if (foundUser) {
-        setUser(foundUser.username)
-      navigate("/home"); // pass username
+      // Save username in localStorage
+      localStorage.setItem("loggedUser", foundUser.username);
+
+      setUser(foundUser.username);
+      navigate("/home");
     } else {
       setMessage("Invalid username or password");
     }
   };
+
+ useEffect(() => {
+  const savedUser = localStorage.getItem("loggedUser");
+  if (savedUser) setUser(savedUser);
+}, []);
 
   return (
     <div className="w-[90%]  h-[95%] py-[40px] bg-white flex flex-col justify-center items-center gap-8 lg:w-[25%]">

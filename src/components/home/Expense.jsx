@@ -1,6 +1,10 @@
+import Template from "../../layout/Template";
+
 function Expense() {
     return ( 
-        <div>Expense</div>
+        <Template>
+            Add Tithes
+        </Template>
      );
 }
 

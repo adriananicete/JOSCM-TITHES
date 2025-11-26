@@ -1,6 +1,10 @@
+import Template from "../../layout/Template";
+
 function GenerateTithes() {
     return ( 
-        <div>GenerateTithes</div>
+        <Template>
+            Add Tithes
+        </Template>
      );
 }
 

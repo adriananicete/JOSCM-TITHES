@@ -13,41 +13,17 @@ import HomeCards from "./home/home-components/HomeCards";
 import { IoTicketOutline } from "react-icons/io5";
 import { RiFileList3Line } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
+import { randomVerseGenerator } from "./home/utils/utils.js";
+import Template from "../layout/Template";
+import { getFullDate } from "./home/utils/utils";
 
 function Home() {
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
 
-  const date = new Date().getDate();
-  const year = new Date().getFullYear();
-  const day = new Date().getDay();
-  const months = new Date().getMonth();
-  const arrDay = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  const arrMonths = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "Augest",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-
-  const dayName = arrDay[day];
-  const monthName = arrMonths[months];
+  const verse = randomVerseGenerator();
+  const { dayName, monthName, year, date } = getFullDate();
+  
 
   function capitalLetter(user) {
     const firstLetter = user.charAt(0).toUpperCase();
@@ -57,7 +33,7 @@ function Home() {
   }
 
   return (
-    <div className="w-[100%] h-[100%] bg-[#f9f9f9] p-5 py-[40px] flex flex-col justify-center items-center gap-5  md:w-[50%] md:h-auto lg:w-[24%]">
+    <Template>
       <div className="w-full flex justify-between items-start">
         <div>
           <h1 className="text-[20px] font-[500]">
@@ -149,12 +125,12 @@ function Home() {
 
         <div className="p-1">
           <p className="text-[14px] text-[#447596] font-[500]">
-            Those who give with love receive joy in return.
+            {verse}
           </p>
         </div>
       </div>
 
-      <div className="w-full h-auto mt-3 flex flex-col gap-1">
+      <div className="w-full h-[auto] mt-3 flex flex-col gap-1">
         <p className="font-[600] ">Activity Center</p>
 
         <div className=" w-full h-[auto] grid grid-cols-2 grid-row-2 gap-3  ">
@@ -195,7 +171,7 @@ function Home() {
           />
         </div>
       </div>
-    </div>
+    </Template>
   );
 }
 
