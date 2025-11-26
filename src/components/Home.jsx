@@ -13,7 +13,6 @@ import HomeCards from "./home/home-components/HomeCards";
 import { IoTicketOutline } from "react-icons/io5";
 import { RiFileList3Line } from "react-icons/ri";
 
-
 function Home() {
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
@@ -26,7 +25,7 @@ function Home() {
   }
 
   return (
-    <div className="w-[100%] h-[100dvh] bg-[#f9f9f9] p-5 flex flex-col justify-center items-center gap-5 md:w-[50%] lg:w-[24%]">
+    <div className="w-[100%] h-[100dvh] bg-[#f9f9f9] p-5 flex flex-col justify-center items-center gap-5 md:w-[50%] md:h-auto lg:w-[24%]">
       <div className="w-full flex justify-between items-start">
         <div>
           <h1 className="text-[20px] font-[500]">
@@ -53,7 +52,7 @@ function Home() {
               Total Remaining Balance:
             </p>
           </div>
-          <div className="w-[auto] h-[auto] bg-[#f9f9f9] p-2 flex justify-center items-center gap-1 rounded-[15px]">
+          <div className="cursor-pointer w-[auto] h-[auto] bg-[#f9f9f9] p-2 flex justify-center items-center gap-1 rounded-[15px]">
             <p className="text-[12px] text-[#7f38ef] font-[500]">View Tithes</p>
             <FaArrowRight size={10} className="text-[#7f38ef]" />
           </div>
@@ -123,37 +122,43 @@ function Home() {
         </div>
       </div>
 
-      <div className=" w-full h-[auto] mt-3 grid grid-cols-2 grid-row-2 gap-3">
-        <div className=" box flex">
-          <div className="w-[49%] box">
+      <div className="w-full h-auto mt-3 flex flex-col gap-1">
+        <p className="font-[600] ">Activity Center</p>
 
+        <div className=" w-full h-[auto] grid grid-cols-2 grid-row-2 gap-3  ">
+          <div className=" bg-[linear-gradient(135deg,#4160ff,#4160ff,#A5B3FF)] flex flex-col justify-between items-center rounded-[10px] shadow-md">
+            <div className="text-[white] w-full leading-[20px] p-2">
+              <p className="text-[12px]">Wednesday</p>
+              <p className="text-[16px] font-[600]">NOVEMBER</p>
+              <p className="text-[18px]">26, 2025</p>
+            </div>
+
+            <div className="w-full p-2 bg-[#fff] rounded-br-[10px] rounded-bl-[10px]">
+              <button className="cursor-pointer text-[14px] ">View Calendar</button>
+            </div>
           </div>
 
-          <div className="w-[49%] box">
+          <HomeCards
+            icon={FaCalendarPlus}
+            title="Add Event"
+            description="Add or update your next church event"
+            color="#3281fb"
+          />
 
-          </div>
+          <HomeCards
+            icon={IoTicketOutline}
+            title="Create Voucher"
+            description="Add or create a new voucher."
+            color="#3ab677"
+          />
+
+          <HomeCards
+            icon={RiFileList3Line}
+            title="Request Form"
+            description="Request or fill out a form document."
+            color="#c2737b"
+          />
         </div>
-
-        <HomeCards
-          icon={FaCalendarPlus}
-          title="Add Event"
-          description="Add or update your next church event"
-          color="#3281fb"
-        />
-
-        <HomeCards
-          icon={IoTicketOutline}
-          title="Create Voucher"
-          description="Add or create a new voucher."
-          color="#3ab677"
-        />
-
-        <HomeCards
-          icon={RiFileList3Line}
-          title="Request From"
-          description="Request or fill out a form document."
-          color="#c2737b"
-        />
       </div>
     </div>
   );
