@@ -112,6 +112,8 @@ function Home() {
             title="Create Voucher"
             description="Add or create a new voucher."
             color="#3ab677"
+            link='/createVoucher'
+            
           />
 
           <HomeCards

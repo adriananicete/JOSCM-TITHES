@@ -6,6 +6,7 @@ import UserProvider from "./context/UserContext";
 import AddTithes from "./components/home/AddTithes";
 import GenerateTithes from "./components/home/GenerateTithes";
 import Expense from "./components/home/Expense";
+import CreateVoucher from "./components/home/CreateVoucher";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="addTithes" element={<AddTithes />} />
             <Route path="generateTithes" element={<GenerateTithes />} />
             <Route path="expenses" element={<Expense />} />
+            <Route path="createVoucher" element={<CreateVoucher />} />
           </Route>
         </Routes>
       </Router>

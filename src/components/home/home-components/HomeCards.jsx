@@ -1,6 +1,8 @@
-function HomeCards({color, title, description,icon:Icon}) {
+import { Link } from "react-router";
+
+function HomeCards({color, link, title, description,icon:Icon}) {
   return (
-    <div style={{}} className="cursor-pointer w-full h-auto border border-[rgba(0,0,0,0.2)] flex flex-col justify-between items-start p-2 rounded-[10px] hover:shadow-sm">
+    <Link to={link} style={{}} className="cursor-pointer w-full h-auto border border-[rgba(0,0,0,0.2)] flex flex-col justify-between items-start p-2 rounded-[10px] hover:shadow-sm">
       <div className="bg-[#e6f6fd] rounded-[50%] w-[35px] h-[35px] flex justify-center items-center">
         <Icon color={color} size={18} />
       </div>
@@ -10,7 +12,7 @@ function HomeCards({color, title, description,icon:Icon}) {
           {description}
         </p>
       </div>
-    </div>
+    </Link>
   );
 }
 

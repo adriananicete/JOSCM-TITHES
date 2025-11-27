@@ -45,7 +45,7 @@ function Expense() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <label className="text-sm text-gray-600">Amount Collected</label>
+            <label className="text-sm text-gray-600">Amount</label>
             <input
               type="number"
               className="border rounded-lg px-3 py-2"
@@ -66,7 +66,7 @@ function Expense() {
         <div className="w-full">
           <h2 className="font-medium text-lg">Upload File</h2>
         </div>
-        <input type="file" className="border rounded-lg px-3 py-2" />
+        <input type="file" className="w-full border rounded-lg px-3 py-2" />
       </div>
 
       {/* Actions */}
@@ -77,7 +77,7 @@ function Expense() {
           Clear
         </button>
         <button className="px-5 py-2 rounded-lg text-white bg-[#4160FF] hover:opacity-90">
-          Save Tithes
+          Create Voucher
         </button>
       </div>
     </Template>
