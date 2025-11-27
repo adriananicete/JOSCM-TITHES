@@ -2,10 +2,7 @@ import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import { TbCurrencyPeso } from "react-icons/tb";
 import { FaArrowRight } from "react-icons/fa6";
-import { FaChartBar } from "react-icons/fa";
-import { LiaFileInvoiceDollarSolid } from "react-icons/lia";
-import { FaPlus } from "react-icons/fa6";
-import { TbUserCircle } from "react-icons/tb";
+
 import { FaCalendarAlt } from "react-icons/fa";
 import { useNavigate } from "react-router";
 import { FaCalendarPlus } from "react-icons/fa";
@@ -16,10 +13,11 @@ import { IoIosArrowForward } from "react-icons/io";
 import { randomVerseGenerator } from "./home/utils/utils.js";
 import Template from "../layout/Template";
 import { getFullDate } from "./home/utils/utils";
+import Headbar from "./home/home-components/Headbar.jsx";
+import QuickAction from "./home/home-components/QuickActions.jsx";
 
 function Home() {
   const { user } = useContext(UserContext);
-  const navigate = useNavigate();
 
   const verse = randomVerseGenerator();
   const { dayName, monthName, year, date } = getFullDate();
@@ -32,26 +30,10 @@ function Home() {
     return formatName;
   }
 
+  const name = capitalLetter(user || "guest");
   return (
     <Template>
-      <div className="w-full flex justify-between items-start">
-        <div>
-          <h1 className="text-[20px] font-[500]">
-            Welcome, {capitalLetter(user || "guest")}!{" "}
-          </h1>
-          <p className="text-[#656565] text-[14px]">
-            Your reports are ready — review them anytime.
-          </p>
-        </div>
-
-        <div className="w-[52px] h-[52px] rounded-[50%] bg-[#fff]">
-          <img
-            className="w-[100%] h-[100%] object-cover "
-            src="https://res.cloudinary.com/dks2psaem/image/upload/v1763347986/joscm-logo_jq0zlo.png"
-            alt=""
-          />
-        </div>
-      </div>
+      <Headbar title={`Welcome ${name}!`} text='Your reports are ready — review them anytime.' />
 
       <div className="bg-[linear-gradient(135deg,#0f1013,#454545,#575759)] w-[100%] h-[120px] flex flex-col justify-center items-center p-3 rounded-[10px]">
         <div className="w-[100%] flex justify-between items-center">
@@ -73,38 +55,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="w-full h-[110px] flex flex-col p-2">
-        <p className="text-[16px] font-[500] mb-2">Quick Actions</p>
-
-        <div className="grid grid-cols-3 gap-2 flex-1 items-stretch text-center">
-          {/* Add Tithes */}
-          <div
-            onClick={() => navigate("/addTithes")}
-            className="bg-[#fff] cursor-pointer flex flex-col justify-center items-center border border-[#fff] rounded-[5px] shadow-sm"
-          >
-            <FaPlus size={25} />
-            <p className="text-[12px]">Add Tithes</p>
-          </div>
-
-          {/* Generate Report */}
-          <div
-            onClick={() => navigate("/generateTithes")}
-            className="bg-[#fff] cursor-pointer flex flex-col justify-center items-center border border-[#fff] rounded-[5px] shadow-sm"
-          >
-            <FaChartBar size={30} />
-            <p className="text-[12px]">Generate Report</p>
-          </div>
-
-          {/* Expense */}
-          <div
-            onClick={() => navigate("/expenses")}
-            className="bg-[#fff] cursor-pointer flex flex-col justify-center items-center border border-[#fff] rounded-[5px] shadow-sm"
-          >
-            <LiaFileInvoiceDollarSolid size={30} />
-            <p className="text-[12px]">Expense</p>
-          </div>
-        </div>
-      </div>
+      <QuickAction />
 
       <div className="w-full rounded-[10px] h-[auto] bg-[#ebf2fa] flex flex-col justify-center items-center gap-2">
         <div className="bg-[#8a61e9] w-[100%] h-[90px] flex justify-center items-end rounded-[10px]">

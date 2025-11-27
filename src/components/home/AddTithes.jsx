@@ -1,12 +1,14 @@
 import { useContext, useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router";
 import Template from "../../layout/Template";
 import { UserContext } from "../../context/UserContext";
+import Headbar from "./home-components/Headbar";
 
 function AddTithes() {
   const denominations = [1000, 500, 200, 100, 50, 20, 10, 5, 1];
  
   const [amount, setAmount] = useState("");
-
+  const navigate = useNavigate();
   const [counts, setCounts] = useState(
     Object.fromEntries(denominations.map((d) => [d, 0]))
   );
@@ -42,27 +44,11 @@ function AddTithes() {
   return (
     <Template>
       {/* Page Title */}
-      <div className="w-full flex justify-between items-start">
-        <div>
-          <h1 className="text-[20px] font-[500]">
-            Hello, {capitalLetter(user || "guest")}!{" "}
-          </h1>
-          <p className="text-[#656565] text-[14px]">
-            Record weekly giving and service collection.
-          </p>
-        </div>
-
-        <div className="w-[52px] h-[52px] rounded-[50%] bg-[#fff]">
-          <img
-            className="w-[100%] h-[100%] object-cover "
-            src="https://res.cloudinary.com/dks2psaem/image/upload/v1763347986/joscm-logo_jq0zlo.png"
-            alt=""
-          />
-        </div>
-      </div>
+      <Headbar title='Add Tithes' text='Record weekly giving and service collection.'/>
 
       {/* Service Information */}
-      <div className="w-full bg-white shadow rounded-xl p-5 space-y-4">
+      <form action="" className="flex flex-col justify-center items-center gap-4">
+        <div className="w-full bg-white shadow border-[2px] border-[#3c6f7d] rounded-xl p-5 space-y-2">
         <h2 className="font-medium text-lg">Service Information</h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -83,7 +69,7 @@ function AddTithes() {
       </div>
 
       {/* Giving Details */}
-      <div className="bg-white shadow rounded-xl p-5 space-y-4">
+      <div className="bg-white shadow border-[2px] border-[#3c6f7d] rounded-xl p-5 space-y-2">
         <h2 className="font-medium text-lg">Giving Details</h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -104,6 +90,7 @@ function AddTithes() {
               type="number"
               className="border rounded-lg px-3 py-2"
               placeholder="0.00"
+              required
               value={amount}
               onChange={(e) => setAmount(Number(e.target.value))}
             />
@@ -117,7 +104,7 @@ function AddTithes() {
       </div>
 
       {/* Denominations */}
-      <div className="w-[100%] bg-white shadow rounded-xl p-5 space-y-4">
+      <div className="w-[100%] bg-white border-[2px] border-[#3c6f7d] shadow rounded-xl p-5 space-y-4">
         <h2 className="font-medium text-lg">Denominations</h2>
 
         <div className="space-y-3">
@@ -133,14 +120,15 @@ function AddTithes() {
                 readOnly
                 className="w-[60px] border rounded-lg px-3 py-1"
                 placeholder="0"
+                required
               />
 
               {/* BUTTONS */}
-              <div className="flex items-center gap-1">
+              <div className="flex items-center ml-5 gap-1">
                 <button
                   type="button"
                   onClick={() => handleIncrement(value)}
-                  className="bg-blue-500 text-white w-[30px] h-[30px] rounded-[5px]"
+                  className="bg-[#3c6f7d] text-white w-[30px] h-[30px] rounded-[5px]"
                 >
                   +
                 </button>
@@ -148,7 +136,7 @@ function AddTithes() {
                 <button
                   type="button"
                   onClick={() => handleDecrement(value)}
-                  className="bg-blue-500 text-white w-[30px] h-[30px] rounded-[5px]"
+                  className="bg-[#3c6f7d] text-white w-[30px] h-[30px] rounded-[5px]"
                 >
                   -
                 </button>
@@ -180,21 +168,16 @@ function AddTithes() {
         </div>
       </div>
 
-      {/* Attachments */}
-      {/* <div className="bg-white shadow rounded-xl p-5 space-y-4">
-        <h2 className="font-medium text-lg">Attachments (Optional)</h2>
-        <input type="file" className="border rounded-lg px-3 py-2" />
-      </div> */}
-
       {/* Actions */}
       <div className="flex justify-end gap-3">
-        <button className="px-5 py-2 border rounded-lg text-gray-700 hover:bg-gray-100">
-          Clear
+        <button onClick={() => navigate('/home')} className="px-5 py-2 border rounded-lg text-gray-700 hover:bg-gray-100">
+          Back
         </button>
         <button className="px-5 py-2 rounded-lg text-white bg-[#4160FF] hover:opacity-90">
           Save Tithes
         </button>
       </div>
+      </form>
     </Template>
   );
 }
