@@ -10,11 +10,11 @@ function CreateVoucher() {
   return (
     <Template>
       <Headbar
-        title={"Disbursement Voucher"}
+        title={"Create Voucher"}
         text={"A form used to approve and record payments."}
       />
 
-      <div className="w-full h-[110px] flex flex-col p-2">
+      <div className="w-full h-[110px]  flex flex-col p-2">
         <p className="text-[16px] font-[500] mb-2">Quick Actions</p>
 
         <div className="grid grid-cols-3 gap-2 flex-1 items-stretch text-center">
@@ -47,7 +47,7 @@ function CreateVoucher() {
         </div>
       </div>
 
-      <div className="w-full bg-white shadow border-[2px] border-[#3c6f7d] rounded-xl p-5 space-y-4">
+      <div className="w-full bg-white shadow border border-[#3c6f7d] rounded-xl p-5 space-y-4">
         <div className="flex justify-between items-center gap-1">
           <h2 className="font-medium text-lg">Service Information</h2>
           <p className="font-bold text-lg text-[#3c6f7d]">PCF-0001</p>
@@ -109,7 +109,7 @@ function CreateVoucher() {
       </div>
 
       {/* Attachments */}
-      <div className="w-full bg-white border-[2px] border-[#3c6f7d] shadow rounded-xl p-5 space-y-2 flex flex-col justify-center items-center">
+      <div className="w-full bg-white border border-[#3c6f7d] shadow rounded-xl p-5 space-y-2 flex flex-col justify-center items-center">
         <div className="w-full">
           <h2 className="font-medium text-lg">Upload File</h2>
         </div>

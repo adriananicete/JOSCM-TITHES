@@ -18,7 +18,7 @@ function QuickAction() {
   const showHome = currentPath !== "/home";
 
   return (
-    <div className="w-full h-[110px] flex flex-col p-2">
+    <div className="w-full h-[110px] flex flex-col p-2 border border-gray-200 rounded-[10px]">
       <p className="text-[16px] font-[500] mb-2">Quick Actions</p>
 
       <div className="grid grid-cols-3 gap-2 flex-1 items-stretch text-center">

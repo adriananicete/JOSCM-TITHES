@@ -1,0 +1,62 @@
+[
+    {
+        "month": "Jan",
+        "tithes": 1500,
+        "expenses": 500
+    },
+    {
+        "month": "Feb",
+        "tithes": 500,
+        "expenses": 500
+    },
+    {
+        "month": "Mar",
+        "tithes": 800,
+        "expenses": 500
+    },
+    {
+        "month": "Apr",
+        "tithes": 900,
+        "expenses": 500
+    },
+    {
+        "month": "May",
+        "tithes": 700,
+        "expenses": 900
+    },
+    {
+        "month": "Jun",
+        "tithes": 1200,
+        "expenses": 500
+    },
+    {
+        "month": "Jul",
+        "tithes": 1500,
+        "expenses": 800
+    },
+    {
+        "month": "Aug",
+        "tithes": 1800,
+        "expenses": 200
+    },
+    {
+        "month": "Sept",
+        "tithes": 1400,
+        "expenses": 500
+    },
+    {
+        "month": "Oct",
+        "tithes": 1100,
+        "expenses": 300
+    },
+    {
+        "month": "Nov",
+        "tithes": 2000,
+        "expenses": 1000
+    },
+    {
+        "month": "Dec",
+        "tithes": 5000,
+        "expenses": 3000
+    }
+]
