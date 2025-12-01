@@ -7,6 +7,9 @@ import AddTithes from "./components/home/AddTithes";
 import GenerateTithes from "./components/home/GenerateTithes";
 import Expense from "./components/home/Expense";
 import CreateVoucher from "./components/home/CreateVoucher";
+import RequestForm from "./components/home/RequestForm";
+import ExpenseSummary from "./components/expense component/ExpressSummary";
+import ExpenseCategory from "./components/expense component/ExpenseCategory";
 
 function App() {
   return (
@@ -21,6 +24,11 @@ function App() {
             <Route path="generateTithes" element={<GenerateTithes />} />
             <Route path="expenses" element={<Expense />} />
             <Route path="createVoucher" element={<CreateVoucher />} />
+            <Route path="requestForm" element={<RequestForm />} />
+            <Route path="expressSummary" element={<ExpenseSummary />} />
+            <Route path="expressCategory" element={<ExpenseCategory />} />
+
+
           </Route>
         </Routes>
       </Router>

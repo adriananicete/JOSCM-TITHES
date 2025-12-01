@@ -121,6 +121,7 @@ function Home() {
             title="Request Form"
             description="Request or fill out a form document."
             color="#c2737b"
+            link='/requestForm'
           />
         </div>
       </div>

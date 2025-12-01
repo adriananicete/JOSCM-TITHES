@@ -15,7 +15,8 @@ function Login() {
   const users = [
     { username: "roselyn", password: "roselyn171014" },
     { username: "jaymar", password: "123456789" },
-    { username: "user3", password: "789" },
+    { username: "dani", password: "dani" },
+    { username: "admin", password: "admin" },
   ];
 
   const handleLogin = (e) => {
